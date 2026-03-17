@@ -1,0 +1,80 @@
+<Page x:Class="CW.FreelanceWork.View.Pages.EmployerPage.LoginEmploerPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      d:DesignHeight="550" d:DesignWidth="1000"
+      FontFamily="Consolas">
+
+    <Grid>
+        <Border HorizontalAlignment="Center" VerticalAlignment="Center"
+                CornerRadius="20" Width="580" Height="400"
+                Background="#4D3825"
+                Effect="{StaticResource MaterialDesignElevationShadow16}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" HorizontalAlignment="Center"
+                            VerticalAlignment="Top" Margin="0 20 0 0">
+                    <TextBlock Text="Фриланс  Биржа"
+                               FontSize="24" FontWeight="SemiBold"
+                               Foreground="White" TextAlignment="Center"/>
+                    <TextBlock Text="Работа  Всем"
+                               TextAlignment="Center" Margin="0 8 0 0"
+                               FontSize="36" FontWeight="SemiBold"
+                               Foreground="#D4A84F"/>
+                    <TextBlock Text="Вход для проверенных компаний"
+                               FontSize="20" Width="420" Margin="0 10 0 0"
+                               FontWeight="SemiBold" Foreground="White"
+                               TextAlignment="Center"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center"
+                            VerticalAlignment="Top" Margin="0 10 0 0">
+
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 6">
+                        <materialDesign:PackIcon Kind="Domain" Margin="0 10 6 0" Foreground="#D4A84F"/>
+                        <TextBox x:Name="TbLogin" Width="180" FontSize="14"
+                                 Foreground="#D4A84F"
+                                 materialDesign:HintAssist.Hint="Введите логин"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 12">
+                        <materialDesign:PackIcon Kind="Lock" Margin="0 10 6 0" Foreground="#D4A84F"/>
+                        <PasswordBox x:Name="PsbPassword" Width="180" FontSize="14"
+                                     Foreground="#D4A84F"
+                                     materialDesign:HintAssist.Hint="Введите пароль"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="BtnLogin" Click="BtnLogin_Click"
+                                Background="#D4A84F" Foreground="White"
+                                BorderThickness="0" Margin="0 0 10 0"
+                                Style="{StaticResource MaterialDesignRaisedButton}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Memory" Margin="0 0 5 0"/>
+                                <TextBlock Text="Предложить работу" FontWeight="SemiBold"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="BtnBack" Click="BtnBack_Click"
+                                Background="#D4A84F" Foreground="White"
+                                BorderThickness="0"
+                                Style="{StaticResource MaterialDesignRaisedButton}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Logout" Margin="0 0 5 0"/>
+                                <TextBlock Text="Выйти" FontWeight="SemiBold"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

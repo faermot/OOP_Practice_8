@@ -1,0 +1,93 @@
+<Page x:Class="CW.FreelanceWork.View.Pages.LoginPage.MainWindowRegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d"
+      d:DesignHeight="550" d:DesignWidth="1000"
+      FontFamily="Consolas">
+
+    <Grid>
+        <Border HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                CornerRadius="20"
+                Width="580" Height="420"
+                Background="#4D3825"
+                Effect="{StaticResource MaterialDesignElevationShadow16}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Motivational text -->
+                <StackPanel Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            Margin="0 15 0 0">
+                    <TextBlock Text="Просто занимайся тем, что любишь, и, что бы то ни было, сумеешь это продать"
+                               FontSize="18" TextWrapping="Wrap" Width="460"
+                               Margin="0 0 0 0" FontWeight="SemiBold"
+                               Foreground="White" TextAlignment="Center"/>
+                </StackPanel>
+
+                <!-- Registration form -->
+                <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top">
+
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                        <materialDesign:PackIcon Kind="Account" Margin="0 10 6 0" Foreground="#D4A84F"/>
+                        <TextBox x:Name="TbFullName" Width="220" FontSize="14"
+                                 Foreground="#D4A84F"
+                                 materialDesign:HintAssist.Hint="Введите ФИО"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                        <materialDesign:PackIcon Kind="Phone" Margin="0 10 6 0" Foreground="#D4A84F"/>
+                        <TextBox x:Name="TbPhone" Width="220" FontSize="14"
+                                 Foreground="#D4A84F"
+                                 materialDesign:HintAssist.Hint="Введите моб. номер (= пароль)"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 5">
+                        <materialDesign:PackIcon Kind="Email" Margin="0 10 6 0" Foreground="#D4A84F"/>
+                        <TextBox x:Name="TbEmail" Width="220" FontSize="14"
+                                 Foreground="#D4A84F"
+                                 materialDesign:HintAssist.Hint="Введите email (= логин)"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="0 0 0 14">
+                        <materialDesign:PackIcon Kind="Tag" Margin="0 10 6 0" Foreground="#D4A84F"/>
+                        <TextBox x:Name="TbSkills" Width="220" FontSize="14"
+                                 Foreground="#D4A84F"
+                                 materialDesign:HintAssist.Hint="Мои навыки"
+                                 materialDesign:TextFieldAssist.HasClearButton="True"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="BtnRegistration" Click="BtnRegistration_Click"
+                                Background="#D4A84F" Foreground="White"
+                                BorderThickness="0" Margin="0 0 10 0"
+                                Style="{StaticResource MaterialDesignRaisedButton}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="AccountCheck" Margin="0 0 5 0"/>
+                                <TextBlock Text="Начать работать!" FontWeight="SemiBold"/>
+                            </StackPanel>
+                        </Button>
+
+                        <Button x:Name="BtnBack" Click="BtnBack_Click"
+                                Background="#D4A84F" Foreground="White"
+                                BorderThickness="0"
+                                Style="{StaticResource MaterialDesignRaisedButton}">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Logout" Margin="0 0 5 0"/>
+                                <TextBlock Text="Я передумал" FontWeight="SemiBold"/>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
